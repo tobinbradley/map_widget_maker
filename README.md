@@ -1,7 +1,7 @@
 Map Widget Maker
 ================
 
-Create at embed-able map iFrame using WMS services and leaflet. 
+Create at embed-able map iFrame using WMS services and leaflet. You can see a demo [here](http://maps.co.mecklenburg.nc.us/embedmap/).
 
 Configuration options are located in js/config.json.
 
