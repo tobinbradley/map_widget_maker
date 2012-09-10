@@ -115,6 +115,10 @@ function createIframe(noembed) {
     // set map extent and zoom
     var loc = "&loc=" + config.center[0] + "," + config.center[1] + "," + config.zoom;
     // return iframe code
-    $("#embed-code").text('<iframe frameborder="0" width="' + $("#embed-width").val() + '" height="' + $("#embed-height").val() + '" src="embed.html' + overlay + basemap + search + identify + size + loc + ' "></iframe>');
+    var url = window.location.protocol + "//" + window.location.host ;
+    var path = window.location.pathname.split( '/' );
+    path.pop();
+    url += path.join("/") + "/";
+    $("#embed-code").text('<iframe frameborder="0" width="' + $("#embed-width").val() + '" height="' + $("#embed-height").val() + '" src="' + url + 'embed.html' + (overlay + basemap + search + identify + size + loc).trim() + '"></iframe>');
     if (noembed) $("#map").html('<iframe frameborder="0" width="350" height="300" src="embed.html' + (overlay + basemap + search + identify + loc).trim() + '&width=350&height=300"></iframe>');
 }

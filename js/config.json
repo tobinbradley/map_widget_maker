@@ -16,7 +16,7 @@
     "wmsnamespace": "postgis",
     "wmsfilter": "postgis:",
     "attribution": "Mecklenburg County GIS",
-    "defaultLayer": "",
+    "defaultlayer": "",
     "center": [35.270, -80.837],
     "zoom": 9,
     "search": false
