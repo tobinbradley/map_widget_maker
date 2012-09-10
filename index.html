@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Map Widget Maker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">
+                You are using an outdated browser.
+                <a href="http://browsehappy.com/">Upgrade your browser today</a>
+                or
+                <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
+                to better experience this site.
+            </p>
+        <![endif]-->
+        <div class="container">
+            <!-- Main hero unit for a primary marketing message or call to action
+            -->
+            <header class="textcenter">
+                <h1>
+                    Map Widget Maker
+                </h1>
+            </header>
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active" id="carousel-2">
+                        <div class="carousel-content">
+                            <div class="carousel-shade span4">
+                                <legend>
+                                    Overlay Layer
+                                </legend>
+                                <select id="wmsList"></select>
+                            </div>
+                            <div class="carousel-shade span4">
+                                <legend>
+                                    Layer Information
+                                </legend>
+                                <div id="wmsTitle" class="textcenter">
+                                    <h5>
+                                    </h5>
+                                </div>
+                                <div id="wmsAbstract">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            <h4>
+                                Step 1: Select Layer
+                            </h4>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
+                                vehicula ut id elit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item" id="carousel-1">
+                        <div class="carousel-content">
+                            <div class="carousel-shade span3">
+                                <legend>
+                                    Base Map
+                                </legend>
+                                <div id="basemaps"></div>
+                                <legend>
+                                    Options
+                                </legend>
+                                <label class="checkbox" id="identify">
+                                    <input type="checkbox" checked>
+                                    Identify on click
+                                </label>
+                                <label class="checkbox" id="search">
+                                    <input type="checkbox">
+                                    Include search box
+                                </label>
+                            </div>
+                            <div class="carousel-shade span5">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            <h4>
+                                Step 2: Customize Your Map
+                            </h4>
+                            <p>
+                                Select the base map to use for your widget. Pan and zoom until you have
+                                the map center and zoom level you want your embedded map to start with.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item" id="carousel-4">
+                        <div class="carousel-content">
+                            <div class="carousel-shade span8">
+                                <legend>
+                                    Map Size and Embed Code
+                                </legend>
+                                <div class="textcenter">
+                                    <img src="img/size1.gif" class="img-polaroid selected-size" data-width="560"
+                                    data-height="315">
+                                    <img src="img/size2.gif" class="img-polaroid" data-width="640" data-height="360">
+                                    <img src="img/size3.gif" class="img-polaroid" data-width="835" data-height="480">
+                                    <img src="img/size4.gif" class="img-polaroid" data-width="1200" data-height="720">
+                                    <div id="size-boxes" style="">
+                                        <div class="input-append">
+                                            <input id="embed-width" type="text" class="input-mini" placeholder="width"
+                                            value="560">
+                                            <span class="add-on">
+                                                px
+                                            </span>
+                                        </div>
+                                        <div class="input-append">
+                                            <input id="embed-height" type="text" class="input-mini" placeholder="height"
+                                            value="315">
+                                            <span class="add-on">
+                                                px
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <textarea rows="5" id="embed-code" class="input-xxlarge">
+                                        <iframe>
+                                        </iframe>
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h4>
+                                    Step 3: Embed Your Map!
+                                </h4>
+                                <p>
+                                    Customize the size of your map by clicking on a size or entering your
+                                    own custom dimensions. Paste the embed code in your site and enjoy your
+                                    new map!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+
+            <div class="clearfix"></div>
+            <hr>
+            <footer>
+                <p>
+                    <a href="http://emaps.charmeck.org/">Mecklenburg County GIS</a>
+                </p>
+            </footer>
+
+            <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+        </div><!-- /container -->
+
+        <!-- scripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>

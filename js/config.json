@@ -1,0 +1,23 @@
+{
+    "basemaps":
+        {
+            "osm": {
+                "title": "Open Street Map",
+                "url": "http://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                "options": { "attribution": "Open Street Map"}
+            },
+            "mecklenburg": {
+                "title": "Mecklenburg County GIS",
+                "url" : "http://maps.co.mecklenburg.nc.us/mbtiles/mbtiles-server.php?db=meckbase.mbtiles&z={z}&x={x}&y={y}",
+                "options": { "attribution": "Mecklenburg County GIS"}
+            }
+        },
+    "wmsurl": "http://maps.co.mecklenburg.nc.us/geoserver/wms",
+    "wmsnamespace": "postgis",
+    "wmsfilter": "postgis:",
+    "attribution": "Mecklenburg County GIS",
+    "defaultLayer": "",
+    "center": [35.270, -80.837],
+    "zoom": 9,
+    "search": false
+}
