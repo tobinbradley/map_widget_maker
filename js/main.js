@@ -10,9 +10,12 @@ $(document).ready(function() {
 
     $('.carousel').carousel({
         interval: false
+    }).bind('slid', function() {
+        if ( $('#mapcanvas').is(':hidden') ) $("#mapcanvas").fadeIn(function(){ createIframe(); });
     });
 
-    $("#carousel-4 img").on("click", function() {
+
+    $("#step3 img").on("click", function() {
         var selected = $(this);
         selected.addClass("selected-size").siblings().removeClass("selected-size");
         $("#embed-width").val(selected.data("width"));
@@ -20,7 +23,7 @@ $(document).ready(function() {
         createIframe(false);
     });
 
-    $("#carousel-4 textarea").on("click", function() {
+    $("#step3 textarea").on("click", function() {
         $(this).select();
     });
 
@@ -120,5 +123,5 @@ function createIframe(noembed) {
     path.pop();
     url += path.join("/") + "/";
     $("#embed-code").text('<iframe frameborder="0" width="' + $("#embed-width").val() + '" height="' + $("#embed-height").val() + '" src="' + url + 'embed.html' + (overlay + basemap + search + identify + size + loc).trim() + '"></iframe>');
-    if (noembed) $("#map").html('<iframe frameborder="0" width="350" height="300" src="embed.html' + (overlay + basemap + search + identify + loc).trim() + '&width=350&height=300"></iframe>');
+    if ( noembed && $('#mapcanvas').is(':visible') ) $("#map").html('<iframe frameborder="0" width="350" height="300" src="' + url + 'embed.html' + (overlay + basemap + search + identify + loc).trim() + '&width=350&height=300"></iframe>');
 }

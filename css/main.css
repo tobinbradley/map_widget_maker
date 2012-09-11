@@ -36,8 +36,6 @@ header h1 {
     box-shadow: 0 8px 12px -6px #000;
 }
 
-.carousel-inner {background: url(../img/carousel-background.jpg) no-repeat; border-radius: 8px; box-shadow: 0 8px 12px -6px #000; }
-.carousel-left { float: left; width: 30%; margin-left: 30px;  }
-.carousel-right { float: right; width: 55%; margin-right: 30px; height: 300px; }
-.carousel-full { width: 90%; margin: 0 auto; height: 300px; }
-#carousel-4 textarea { margin-top: 20px; }
+.carousel-inner {background: url(../img/carousel-background.jpg) no-repeat; border-radius: 8px 8px 0 0; box-shadow: 0 8px 12px -6px #000; }
+#step3 textarea { margin-top: 20px; }
+#mapcanvas { height: 325px; }
