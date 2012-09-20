@@ -64,6 +64,10 @@ $(document).ready(function() {
 
 });
 
+/*
+    Return GetFeatureInfo request from click event
+    Big props to Bryan McBride - http://projects.bryanmcbride.com/leaflet/wms_info.html
+*/
 function onMapClick(e) {
     var latlngStr = '(' + e.latlng.lat.toFixed(3) + ', ' + e.latlng.lng.toFixed(3) + ')';
     var BBOX = map.getBounds()._southWest.lng + "," + map.getBounds()._southWest.lat + "," + map.getBounds()._northEast.lng + "," + map.getBounds()._northEast.lat;
@@ -77,7 +81,6 @@ function onMapClick(e) {
         url: "wmsproxy.php?type=GetFeatureInfo&args=" + URL,
         dataType: "html",
         type: "GET",
-        async: false,
         success: function(data) {
             if (data.indexOf("<table") != -1) {
                 popup.setContent(data);

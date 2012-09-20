@@ -29,7 +29,6 @@ $(document).ready(function() {
 
     $("#wmsList").change(function() {
         var selected = $("#wmsList option:selected");
-        $("#wmsTitle h5").html(selected.data("title"));
         $("#wmsAbstract").html(selected.data("abstract"));
         selected.data("identify") == true ? $("#identify").show() : $("#identify").hide();
         createIframe();
