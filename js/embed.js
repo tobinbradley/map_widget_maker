@@ -70,7 +70,7 @@ $(document).ready(function() {
 */
 function onMapClick(e) {
     var latlngStr = '(' + e.latlng.lat.toFixed(3) + ', ' + e.latlng.lng.toFixed(3) + ')';
-    var BBOX = map.getBounds()._southWest.lng + "," + map.getBounds()._southWest.lat + "," + map.getBounds()._northEast.lng + "," + map.getBounds()._northEast.lat;
+    var BBOX = map.getBounds().toBBoxString();
     var WIDTH = map.getSize().x;
     var HEIGHT = map.getSize().y;
     var X = map.layerPointToContainerPoint(e.layerPoint).x;
