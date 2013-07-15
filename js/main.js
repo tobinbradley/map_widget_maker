@@ -88,12 +88,12 @@ $(document).ready(function() {
 
 function loadGetCapabilities(data) {
     $(data).find('Layer').each(function() {
-        if ($(this).children("Name").text().match(config.wmsfilter) != null) {
-            var name = $(this).children("Name").text();
-            var title = $(this).children("Title").text();
-            var abstract = $(this).children("Abstract").text();
-            var identify;
-            $(this).attr("queryable") == 1 ? identify = true : identify = false;
+        var name = $(this).children("Name").text();
+        var title = $(this).children("Title").text();
+        var abstract = $(this).children("Abstract").text();
+        var identify;
+        $(this).attr("queryable") == 1 ? identify = true : identify = false;
+        if ($(this).children("Name").text().match(config.wmsfilter) !== null) {
             $("#wmsList").append('<option data-name="' + name + '" data-abstract="' + abstract + '" data-title="' + title + '" data-identify="' + identify + '">' + title + '</option>');
         }
     });

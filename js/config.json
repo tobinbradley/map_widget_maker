@@ -13,8 +13,7 @@
             }
         },
     "wmsurl": "http://maps.co.mecklenburg.nc.us/geoserver/wms",
-    "wmsnamespace": "postgis",
-    "wmsfilter": "postgis:",
+    "wmsfilter": "postgis",
     "attribution": "Mecklenburg County GIS",
     "defaultlayer": "",
     "center": [35.270, -80.837],
