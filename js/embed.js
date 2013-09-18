@@ -73,8 +73,8 @@ function onMapClick(e) {
     var BBOX = map.getBounds().toBBoxString();
     var WIDTH = map.getSize().x;
     var HEIGHT = map.getSize().y;
-    var X = map.layerPointToContainerPoint(e.layerPoint).x;
-    var Y = map.layerPointToContainerPoint(e.layerPoint).y;
+    var X = Math.round(map.layerPointToContainerPoint(e.layerPoint).x);
+    var Y = Math.round(map.layerPointToContainerPoint(e.layerPoint).y);
     var URL = '?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo&LAYERS=' + overlay + '&QUERY_LAYERS=' + overlay + '&STYLES=&BBOX=' + BBOX + '&FEATURE_COUNT=5&HEIGHT=' + HEIGHT + '&WIDTH=' + WIDTH + '&FORMAT=image%2Fpng&INFO_FORMAT=text%2Fhtml&SRS=EPSG%3A4326&X=' + X + '&Y=' + Y;
     URL = escape(URL);
     $.ajax({
